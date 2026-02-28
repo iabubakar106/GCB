@@ -102,28 +102,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
   </div>
 
   <!-- Sidebar / Side Navigation -->
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:56px; z-index:3;" id="mySidebar">
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:58px; z-index:3;" id="mySidebar">
     <class="w3-bar-item" style="font-weight:300; margin-top: 40px; margin-left: 0px;">
-    <a href="#intro" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green w3-green">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green w3-green">Home</a>
     <div class="w3-dropdown-click">
-    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us</button>
+    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
     <div id="Drop" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">School Administrative Staff</a>
+      <a href="history.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
       <a href="past-principals.html" class="w3-bar-item w3-button w3-hover-green">Past Headmaster/Principal</a>
     </div>
    </div>
    <div class="w3-dropdown-click">
-    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life</button>
+    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
     <div id="Drop1" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Curriculum</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Houses</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
+      <a href="facilities.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
+      <a href="houses.html" class="w3-bar-item w3-button w3-hover-green">Houses</a>
+      <a href="award.html" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
     </div>
    </div>
-    <a href="#" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
+    <a href="admission.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Contact</a>
   </nav>
 
@@ -131,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   <div class="w3-overlay w3-hide-large" style="cursor:pointer" id="overlay"></div>
 
   <!-- Page Content -->
-  <div class="w3-main" style="margin-left:260px; margin-top:66px;">
+  <div class="w3-main " style="margin-left:260px; margin-top:66px;">
 
     <!-- Introduction Section -->
     <section id="intro" class="w3-margin w3-container w3-padding-32 w3-white w3-card w3-round-large">
@@ -146,17 +144,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
       <div class="w3-row">
         <div class="w3-third w3-container w3-theme-l1">
           <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l1 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="about.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-address-card-o" style="font-size:36px;color:white;"></i><br>History</h3></a></button>
+            <button class="w3-btn w3-block w3-theme-l1 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="history.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-address-card-o" style="font-size:36px;color:white;"></i><br>History</h3></a></button>
           </div>
         </div>
         <div class="w3-third w3-container w3-theme-l2">
           <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l2 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="services.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-diamond" style="font-size:36px;color:white;"></i><br>Admission</h3></a></button>
+            <button class="w3-btn w3-block w3-theme-l2 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="admission.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-diamond" style="font-size:36px;color:white;"></i><br>Admission</h3></a></button>
           </div>
         </div>
         <div class="w3-third w3-container w3-theme-l3">
           <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l3 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="contact.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-users" style="font-size:36px;color:white;"></i><br>Alumni</h3></a></button>
+            <button class="w3-btn w3-block w3-theme-l3 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="#" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-users" style="font-size:36px;color:white;"></i><br>Alumni</h3></a></button>
           </div>
         </div>
       </div>
@@ -175,10 +173,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <p class="w3-justify">The college is historically recognized as a training ground for discipline, hard work, and national unity. It aims to provide qualitative education and moral excellence to its students.</p> 
       </div>
       <div id="Vision" class="w3-container motto" style="display:none">
-        <p class="w3-justify">To maintain the high standards of academic excellence set by its founders and to remain a leading institution for producing eminent national leaders. </p>
+        <p class="w3-justify">To maintain the high standards of academic excellence set by its founders and to remain a leading school for producing eminent national leaders. </p>
       </div>
     </section>
-    
+    <!-- Principal -->
+    <section id="" class="w3-container ">
+      <div class="w3-row">
+        <div class="w3-twothird w3-margin-bottom w3-container" style="margin-top: 20px;">
+          <h2>Scool Principal</h2>
+          <hr class="w3-border-grey">
+          <img src="images/P.jpeg" alt="gcb_gate" class=" w3-margin-bottom w3-card" style="width:100%;"/>
+          <p class="w3-large w3-opacity-min">Mall. Mohammed A. Kolo Manbe</p>
+          <p class="w3-opacity w3-justify" style="text-align: left;">Mallam Mohammed A. Kolo Manbe is a dedicated educator with an extensive academic background. He was born on 16<sup>th</sup> March 1967, in Mambe Lavun Local Government Area of Niger State. He began his early education at Mambe Primary School from 1977 to 1983, before attending Community Commercial Technical College Vunchi, between 1983 and 1987. <br>
+          To further his professional education, he attended the Federal College of Education Kontagora, where he earned his NCE in Economics/Government in 1993. He later obtained a Bachelor of Education (B.Ed.) in Economics from Ambrose Alli University Ekpoma in 2007. Following years of significant educational contributions to Government College Bida, he reached a career milestone on 25<sup>th</sup> March 2025, when he was appointed as the Principal of the school.</p>
+        </div>
+        <div class="w3-third w3-margin-bottom">   
+            <h4 class="w3-wide w3-text-green">Quik links</h4>
+            <a href="houses.html" class="w3-btn w3-theme-d2" style="width: 100%; text-align: left;">Houses<span class="w3-right">&raquo;</span></a>
+            <a href="facilities.html" class="w3-btn w3-theme-d3" style="width: 100%; text-align: left;">Facilities<span class="w3-right">&raquo;</span></a>
+            <a href="award.html" class="w3-btn w3-theme-d4" style="width: 100%; text-align: left;">Awards & Honours<span class="w3-right">&raquo;</span></a>
+            <div class="w3-content" style="max-width:800px">
+              <div class="headSlides w3-card-2">
+               <img src="images/P.jpeg" style="width:92%;" class="w3-margin w3-animate-opacity">
+               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Principal</b> <br><span class="w3-medium">Mall. Mohammed Kolo Manbe</span></p>
+              </div>
+              <div class="headSlides w3-card-2">
+               <img src="images/VP.png" style="width:92%;" class="w3-margin w3-animate-opacity">
+               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Vice Principal Admin</b> <br><span class="w3-medium">Mall. Umar Raji</span></p>
+              </div>
+              <div class="headSlides w3-card-2">
+               <img src="images/VP2.jpeg" style="width:92%;" class="w3-margin w3-animate-opacity">
+               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Vice Principal Academic</b> <br><span class="w3-medium">Haj. Aisha Mohammed Sarki</span></p>
+              </div>
+              <div class="headSlides w3-card-2">
+               <img src="images/ICT.png" style="width:92%;" class="w3-margin w3-animate-opacity">
+               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>ICT Desk Officer</b> <br><span class="w3-medium">Mall. Danjuma Hassan</span></p>
+              </div>
+            </div>
+         
+        </div> 
+      </div>
+    </section>
     <!-- History -->
     <section id="about" class="w3-margin w3-container ">
       <div class="w3-row">
@@ -192,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           <div class="w3-padding w3-medium">
             <h3 class="section-heading">History</h3>
             <p class="w3-opacity w3-justify" style="text-align: left;">Government College, Bida, established in 1912 (with first intake in 1914), is a historic Nigerian boys' boarding school known for producing many prominent figures, including two Nigerian Heads of State, governors, and ministers, evolving through names like Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
-            <a href="#" class="w3-theme-l1 w3-btn" style="text-decoration: none;">Read More...</a>
+            <a href="history.html" class="w3-theme-l1 w3-btn" style="text-decoration: none;">Read More...</a>
           </div>
 
         </div> 
@@ -324,51 +359,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <div class="w3-third w3-small w3-opacity w3-margin">
           <div class="useful">
             <h4><b>Useful links</b></h4>
-            <a href="#" class="w3-button  w3-hover-none">> Home</a><br>
-            <a href="#" class=" w3-button  w3-hover-none">> The School</a><br>
-            <a href="#" class=" w3-button  w3-hover-none">> School Administrative Staff</a><br>
-            <a href="#" class=" w3-button w3-hover-none">> Houses</a><br>
-            <a href="#" class=" w3-button w3-hover-none">> Curriculum</a>     
+            <a href="index.html" class="w3-button  w3-hover-none">> Home</a><br>
+            <a href="history.html" class=" w3-button  w3-hover-none">> The School</a><br>
+            <a href="facilities.html" class=" w3-button  w3-hover-none">> School Facilities</a><br>
+            <a href="houses.html" class=" w3-button w3-hover-none">> Houses</a><br>
+            <a href="admission.html" class=" w3-button w3-hover-none">> Admission</a>     
           </div>   
         </div>
       </div>
     </footer>
     <div class="w3-center w3-padding w3-small w3-opacity" style="background-color: green; color: white;">
           GCB &copy; 2026. All Rights Reserverd <br>
-          Designed by BOSA 2013
+          Powered by BOSA 2013
     </div>
   </div>
   <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

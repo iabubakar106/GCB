@@ -102,43 +102,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
   </div>
 
   <!-- Sidebar / Side Navigation -->
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:56px; z-index:3;" id="mySidebar">
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:58px; z-index:3;" id="mySidebar">
     <class="w3-bar-item" style="font-weight:300; margin-top: 40px; margin-left: 0px;">
     <a href="index.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green w3-green">Home</a>
     <div class="w3-dropdown-click">
-    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us</button>
+    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
     <div id="Drop" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">School Administrative Staff</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Past Headmaster/Principal</a>
+      <a href="history.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
+      <a href="past-principals.html" class="w3-bar-item w3-button w3-hover-green">Past Headmaster/Principal</a>
     </div>
    </div>
    <div class="w3-dropdown-click">
-    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life</button>
+    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
     <div id="Drop1" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Curriculum</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Houses</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
+      <a href="facilities.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
+      <a href="houses.html" class="w3-bar-item w3-button w3-hover-green">Houses</a>
+      <a href="award.html" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
     </div>
    </div>
-    <a href="#" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Contact</a>
+    <a href="admission.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Contact</a>
   </nav>
 
   <!-- Overlay for mobile -->
   <div class="w3-overlay w3-hide-large" style="cursor:pointer" id="overlay"></div>
 
   <!-- Page Content -->
-  <div class="w3-main" style="margin-left:260px; margin-top:58px;">
+  <div class="w3-main" style="margin-left:260px; margin-top:56px;">
 
     <!-- Introduction Section -->
     <section style="background-image: url(images/GCB3.jpeg); background-repeat: no-repeat; background-position: center;">
       <h3 class="w3-margin w3-text-white w3-padding-32"><b>Past Headmaster/Principal</b></h3>
     </section>
     <!-- Past Principal -->
-    <section class="w3-margin w3-text-small w3-container w3-card w3-border-left w3-border-green">
+    <section class="w3-margin w3-container w3-card w3-border-left w3-border-green">
       <div class="w3-responsive">
         <table class="w3-table-all w3-hoverable w3-margin w3-animate-zoom">
           <tr>
@@ -421,27 +419,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <div class="w3-third w3-small w3-opacity w3-margin">
           <div class="useful">
             <h4><b>Useful links</b></h4>
-            <a href="#" class="w3-button  w3-hover-none">> Home</a><br>
-            <a href="#" class=" w3-button  w3-hover-none">> The School</a><br>
-            <a href="#" class=" w3-button  w3-hover-none">> School Administrative Staff</a><br>
-            <a href="#" class=" w3-button w3-hover-none">> Houses</a><br>
-            <a href="#" class=" w3-button w3-hover-none">> Curriculum</a>     
+            <a href="index.html" class="w3-button  w3-hover-none">> Home</a><br>
+            <a href="history.html" class=" w3-button  w3-hover-none">> The School</a><br>
+            <a href="facilities.html" class=" w3-button  w3-hover-none">> School Facilities</a><br>
+            <a href="houses.html" class=" w3-button w3-hover-none">> Houses</a><br>
+            <a href="admission.html" class=" w3-button w3-hover-none">> Admission</a>     
           </div>   
         </div>
       </div>
     </footer>
     <div class="w3-center w3-padding w3-small w3-opacity" style="background-color: green; color: white;">
           GCB &copy; 2026. All Rights Reserverd <br>
-          Designed by BOSA 2013
+          Powered by BOSA 2013
     </div>
   </div>
   <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
 
 
 

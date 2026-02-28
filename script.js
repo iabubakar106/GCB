@@ -30,49 +30,41 @@ function toggleAccordion(id) {
     element.classList.add('w3-show');
   }
 }
+//Home Slideshow
+var myIndex1 = 0;
+carousel1();
 
-var myIndex = 0;
-carousel();
-
-function carousel() {
+function carousel1() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 3000); // Change image every 2 seconds
+  myIndex1++;
+  if (myIndex1 > x.length) {myIndex1 = 1}    
+  // Display slide
+  x[myIndex1-1].style.display = "block";  
+  setTimeout(carousel1, 3000); 
 }
 
-//SlideShow Home
-var slideIndex = 1;
-          showDivs(slideIndex);
+//Staff Slideshow
+var myIndex2 = 0;
+carousel2();
 
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
+function carousel2() {
+  var i;
+  var x = document.getElementsByClassName("headSlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex2++;
+  if (myIndex2 > x.length) {myIndex2 = 1}    
+  
+  // Display slide
+  x[myIndex2-1].style.display = "block";   
+  setTimeout(carousel2, 5000); 
+}
 
-          function currentDiv(n) {
-            showDivs(slideIndex = n);
-          }
-
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlide");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" w3-theme-d4", "");
-            }
-            x[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " w3-theme-d4";
-          }
 //Drop down
 function myFunction() {
   var x = document.getElementById("Drop");
@@ -99,4 +91,15 @@ function openCity(cityName) {
   }
   document.getElementById(cityName).style.display = "block";  
 }
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
