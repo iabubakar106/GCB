@@ -84,237 +84,123 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   
 </head>
-<body class="w3-light-grey">
+<body id="top" class="w3-light-grey">
 
-  <!-- Top Navigation Bar -->
-  <div class="w3-bar w3-top w3-card w3-large w3-white" style="z-index:4;">
-    <div class="w3-row"> 
-      <div class="w3-third" style="width: 13%; margin-left: 0; margin-top: 4px;">
-        <span class="w3-left w3-bar-item"><img src="images/gcblogo.png"" alt="Logo" style="height: 25px;"/></span>
-      </div>
-      <div class="w3-third" style="width: 74%;">
-        <h4 class="section-heading w3-wide" style="text-shadow:2px 1px 0 #444; color: green;"><marquee><b>Government College Bida Official Website</b></marquee></h4>
-      </div>
-      <div class="w3-third" style="width: 13%; margin-bottom: 10px">
-        <button class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-none w3-xlarge w3-hover-text-green w3-text-green" id="menu-btn" title="Toggle Navigation" >&#9776;</button>
-      </div>
+  <div class="gcb-loader" id="page-loader" aria-live="polite" aria-label="Loading GCB" aria-hidden="false"><div class="gcb-loader-inner"><span class="gcb-spinner" aria-hidden="true"></span><span>GCB</span></div></div>
+  <header class="w3-top w3-card gcb-topbar">
+    <a class="gcb-brand" href="index.html" aria-label="GCB home"><img src="images/gcblogo.png" alt="GCB crest"><span class="gcb-brand-name">GCB<small>Government College Bida</small></span></a>
+    <span class="gcb-top-title">Government College Bida</span>
+    <button class="w3-button w3-hide-large w3-xlarge w3-text-green" id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mySidebar" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  </header>
+  <nav class="w3-sidebar w3-bar-block w3-collapse" id="mySidebar" aria-label="Main navigation">
+    <a href="index.html"><i class="fa fa-home gcb-nav-icon" aria-hidden="true"></i>Home</a>
+    <div class="gcb-nav-group">
+      <button type="button" onclick="myFunction()" aria-controls="Drop" aria-expanded="false"><i class="fa fa-university gcb-nav-icon" aria-hidden="true"></i>About Us <i class="fa fa-angle-right gcb-chevron" aria-hidden="true"></i></button>
+      <div id="Drop" class="w3-dropdown-content w3-bar-block"><a href="history.html"><i class="fa fa-book gcb-nav-icon" aria-hidden="true"></i>The School</a><a href="past-principals.html"><i class="fa fa-users gcb-nav-icon" aria-hidden="true"></i>Past Principals</a></div>
     </div>
-  </div>
-
-  <!-- Sidebar / Side Navigation -->
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:58px; z-index:3;" id="mySidebar">
-    <class="w3-bar-item" style="font-weight:300; margin-top: 40px; margin-left: 0px;">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green w3-green">Home</a>
-    <div class="w3-dropdown-click">
-    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
-    <div id="Drop" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="history.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
-      <a href="past-principals.html" class="w3-bar-item w3-button w3-hover-green">Past Headmaster/Principal</a>
+    <div class="gcb-nav-group">
+      <button type="button" onclick="myFunction1()" aria-controls="Drop1" aria-expanded="false"><i class="fa fa-compass gcb-nav-icon" aria-hidden="true"></i>School Life <i class="fa fa-angle-right gcb-chevron" aria-hidden="true"></i></button>
+      <div id="Drop1" class="w3-dropdown-content w3-bar-block"><a href="facilities.html"><i class="fa fa-building-o gcb-nav-icon" aria-hidden="true"></i>Facilities</a><a href="houses.html"><i class="fa fa-shield gcb-nav-icon" aria-hidden="true"></i>Houses</a><a href="award.html"><i class="fa fa-trophy gcb-nav-icon" aria-hidden="true"></i>Awards &amp; Honours</a></div>
     </div>
-   </div>
-   <div class="w3-dropdown-click">
-    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
-    <div id="Drop1" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="facilities.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
-      <a href="houses.html" class="w3-bar-item w3-button w3-hover-green">Houses</a>
-      <a href="award.html" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
-    </div>
-   </div>
-    <a href="admission.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
-    <a href="gallery.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Contact</a>
+    <a href="admission.html"><i class="fa fa-graduation-cap gcb-nav-icon" aria-hidden="true"></i>Admission</a>
+    <a href="gallery.html"><i class="fa fa-picture-o gcb-nav-icon" aria-hidden="true"></i>Gallery</a>
+    <a href="contact.html"><i class="fa fa-envelope-o gcb-nav-icon" aria-hidden="true"></i>Contact</a>
   </nav>
-
-  <!-- Overlay for mobile -->
-  <div class="w3-overlay w3-hide-large" style="cursor:pointer" id="overlay"></div>
-
+  <div class="w3-overlay w3-hide-large" id="overlay" aria-hidden="true"></div>
   <!-- Page Content -->
   <div class="w3-main " style="margin-left:260px; margin-top:66px;">
 
     <!-- Introduction Section -->
-    <section id="intro" class="w3-margin w3-container w3-padding-32 w3-white w3-card w3-round-large">
-      
-      <div class="w3-content" style="width:100%;">
-        <img class="mySlides" src="images/GCBgate.jpeg" style="width:100%;" alt="GCBgate" />
-        <img class="mySlides" src="images/GCB1.jpeg" style="width:100%; " alt="GCB1" />
-        <img class="mySlides" src="images/GCB3.jpeg" style="width:100%; " alt="GCB3" />
+    <section id="intro" class="gcb-home-intro w3-margin w3-container w3-white w3-card w3-round-large">
+      <div class="gcb-home-slideshow" role="region" aria-roledescription="carousel" aria-label="Government College Bida highlights">
+        <article class="gcb-home-slide" aria-roledescription="slide" aria-label="1 of 3">
+          <img src="images/GCBgate.jpeg" alt="Main gate of Government College Bida">
+          <div class="gcb-slide-caption"><span class="gcb-slide-kicker">Welcome to GCB</span><p>“Every great journey begins with a place to learn.”</p><span class="gcb-slide-note">Government College Bida · Est. 1912</span></div>
+        </article>
+        <article class="gcb-home-slide" aria-roledescription="slide" aria-label="2 of 3">
+          <img src="images/GCB1.jpeg" alt="Campus grounds at Government College Bida">
+          <div class="gcb-slide-caption"><span class="gcb-slide-kicker">Learn with purpose</span><p>“Knowledge opens doors. Character helps us lead.”</p><span class="gcb-slide-note">Building bright minds and strong character</span></div>
+        </article>
+        <article class="gcb-home-slide" aria-roledescription="slide" aria-label="3 of 3">
+          <img src="images/GCB3.jpeg" alt="School grounds at Government College Bida">
+          <div class="gcb-slide-caption"><span class="gcb-slide-kicker">A tradition of excellence</span><p>“Curiosity today. Possibility for a lifetime.”</p><span class="gcb-slide-note">Slowly but surely</span></div>
+        </article>
+        <div class="gcb-home-slide-dots" role="group" aria-label="Choose a featured image">
+          <button type="button" class="gcb-home-slide-dot" aria-label="Show image 1" aria-pressed="true"></button>
+          <button type="button" class="gcb-home-slide-dot" aria-label="Show image 2" aria-pressed="false"></button>
+          <button type="button" class="gcb-home-slide-dot" aria-label="Show image 3" aria-pressed="false"></button>
+        </div>
       </div>
     </section>
-    <section class="w3-margin">
-      <div class="w3-row">
-        <div class="w3-third w3-container w3-theme-l1">
-          <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l1 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="history.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-address-card-o" style="font-size:36px;color:white;"></i><br>History</h3></a></button>
-          </div>
-        </div>
-        <div class="w3-third w3-container w3-theme-l2">
-          <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l2 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="admission.html" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-diamond" style="font-size:36px;color:white;"></i><br>Admission</h3></a></button>
-          </div>
-        </div>
-        <div class="w3-third w3-container w3-theme-l3">
-          <div class="w3-center w3-margin">
-            <button class="w3-btn w3-block w3-theme-l3 w3-wide" style="text-shadow:1px 1px 0 #444";><a href="#" style="text-decoration: none;"><h3 class="w3-text-white"><i class="fa fa-users" style="font-size:36px;color:white;"></i><br>Alumni</h3></a></button>
-          </div>
-        </div>
-      </div>
+    <section class="gcb-quick-links" aria-label="Explore Government College Bida">
+      <a class="gcb-quick-card" href="history.html"><span class="gcb-quick-icon"><i class="fa fa-university" aria-hidden="true"></i></span><span class="gcb-quick-eyebrow">Our story</span><h2>School History</h2><p>Explore more than a century of learning and leadership.</p><span class="gcb-quick-arrow" aria-hidden="true"><i class="fa fa-arrow-right"></i></span></a>
+      <a class="gcb-quick-card" href="admission.html"><span class="gcb-quick-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span><span class="gcb-quick-eyebrow">Join GCB</span><h2>Admissions</h2><p>Find entry requirements and information for families.</p><span class="gcb-quick-arrow" aria-hidden="true"><i class="fa fa-arrow-right"></i></span></a>
+      <a class="gcb-quick-card" href="#service"><span class="gcb-quick-icon"><i class="fa fa-users" aria-hidden="true"></i></span><span class="gcb-quick-eyebrow">Our community</span><h2>Alumni</h2><p>Meet some of the graduates shaping our shared legacy.</p><span class="gcb-quick-arrow" aria-hidden="true"><i class="fa fa-arrow-right"></i></span></a>
     </section>
     <!-- MotoMisionVision -->
-    <section class="w3-margin w3-card w3-animate-top">
-      <div class="w3-bar">
-        <button class="w3-bar-item w3-button w3-hover-green w3-wide w3-theme-l1" onclick="openCity('Motto')">Moto</button>
-        <button class="w3-bar-item w3-button w3-hover-green w3-wide" onclick="openCity('Mission')">Mission</button>
-        <button class="w3-bar-item w3-button w3-hover-green w3-wide" onclick="openCity('Vision')">Vision</button>
-      </div>
-      <div id="Motto" class="w3-container motto">
-        <p class="w3-animate-fading w3-text-green w3-padding-16"><b>Slowly but surely</b></p>
-      </div>
-      <div id="Mission" class="w3-container motto" style="display:none">
-        <p class="w3-justify w3-padding-16">The college is historically recognized as a training ground for discipline, hard work, and national unity. It aims to provide qualitative education and moral excellence to its students.</p> 
-      </div>
-      <div id="Vision" class="w3-container motto" style="display:none">
-        <p class="w3-justify w3-padding-16">To maintain the high standards of academic excellence set by its founders and to remain a leading school for producing eminent national leaders. </p>
+    <section class="gcb-mvv-section" aria-labelledby="gcb-mvv-title">
+      <div class="gcb-mvv-heading"><span class="gcb-section-label">What guides us</span><h2 id="gcb-mvv-title">Our foundation</h2><p>The values and purpose at the heart of GCB.</p></div>
+      <div class="gcb-mvv-card">
+        <div class="gcb-mvv-tabs" role="tablist" aria-label="Motto, mission and vision">
+          <button id="tab-Motto" class="gcb-mvv-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="Motto" onclick="openCity('Motto')"><i class="fa fa-quote-left" aria-hidden="true"></i><span>Motto</span></button>
+          <button id="tab-Mission" class="gcb-mvv-tab" type="button" role="tab" aria-selected="false" aria-controls="Mission" onclick="openCity('Mission')"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Mission</span></button>
+          <button id="tab-Vision" class="gcb-mvv-tab" type="button" role="tab" aria-selected="false" aria-controls="Vision" onclick="openCity('Vision')"><i class="fa fa-eye" aria-hidden="true"></i><span>Vision</span></button>
+        </div>
+        <div id="Motto" class="gcb-mvv-panel motto" role="tabpanel" aria-labelledby="tab-Motto"><span class="gcb-mvv-panel-icon"><i class="fa fa-quote-right" aria-hidden="true"></i></span><span class="gcb-mvv-panel-label">Our motto</span><h3 class="w3-animate-fading">Slowly but surely</h3><p>Steady effort. Lasting achievement.</p></div>
+        <div id="Mission" class="gcb-mvv-panel motto" role="tabpanel" aria-labelledby="tab-Mission" style="display:none"><span class="gcb-mvv-panel-icon"><i class="fa fa-bullseye" aria-hidden="true"></i></span><span class="gcb-mvv-panel-label">Our mission</span><h3>Education with purpose</h3><p>The college is historically recognized as a training ground for discipline, hard work, and national unity. It aims to provide qualitative education and moral excellence to its students.</p></div>
+        <div id="Vision" class="gcb-mvv-panel motto" role="tabpanel" aria-labelledby="tab-Vision" style="display:none"><span class="gcb-mvv-panel-icon"><i class="fa fa-eye" aria-hidden="true"></i></span><span class="gcb-mvv-panel-label">Our vision</span><h3>Excellence for generations</h3><p>To maintain the high standards of academic excellence set by its founders and to remain a leading school for producing eminent national leaders.</p></div>
       </div>
     </section>
     <!-- Principal -->
-    <section id="" class="w3-container ">
-      <div class="w3-row">
-        <div class="w3-twothird w3-margin-bottom w3-container" style="margin-top: 20px;">
-          <h2>School Principal</h2>
-          <hr class="w3-border-grey">
-          <img src="images/P.jpeg" alt="gcb_gate" class=" w3-margin-bottom w3-card" style="width:100%;"/>
-          <p class="w3-large w3-opacity-min">Mall. Mohammed A. Kolo Manbe</p>
-          <p class="w3-opacity w3-justify" style="text-align: left;">Mallam Mohammed A. Kolo Manbe is a dedicated educator with an extensive academic background. He was born on 16<sup>th</sup> March 1967, in Mambe Lavun Local Government Area of Niger State. He began his early education at Mambe Primary School from 1977 to 1983, before attending Community Commercial Technical College Vunchi, between 1983 and 1987. <br>
-          To further his professional education, he attended the Federal College of Education Kontagora, where he earned his NCE in Economics/Government in 1993. He later obtained a Bachelor of Education (B.Ed.) in Economics from Ambrose Alli University Ekpoma in 2007. Following years of significant educational contributions to Government College Bida, he reached a career milestone on 25<sup>th</sup> March 2025, when he was appointed as the Principal of the school.</p>
-        </div>
-        <div class="w3-third w3-margin-bottom">   
-            <h4 class="w3-wide w3-text-green">Quik links</h4>
-            <a href="houses.html" class="w3-btn w3-theme-d2" style="width: 100%; text-align: left;">Houses<span class="w3-right">&raquo;</span></a>
-            <a href="facilities.html" class="w3-btn w3-theme-d3" style="width: 100%; text-align: left;">Facilities<span class="w3-right">&raquo;</span></a>
-            <a href="award.html" class="w3-btn w3-theme-d4" style="width: 100%; text-align: left;">Awards & Honours<span class="w3-right">&raquo;</span></a>
-            <div class="w3-content" style="max-width:800px">
-              <div class="headSlides w3-card-2">
-               <img src="images/P.jpeg" style="width:92%;" class="w3-margin w3-animate-opacity">
-               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Principal</b> <br><span class="w3-medium">Mall. Mohammed Kolo Manbe</span></p>
-              </div>
-              <div class="headSlides w3-card-2">
-               <img src="images/VP.png" style="width:92%;" class="w3-margin w3-animate-opacity">
-               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Vice Principal Admin</b> <br><span class="w3-medium">Mall. Umar Raji</span></p>
-              </div>
-              <div class="headSlides w3-card-2">
-               <img src="images/VP2.jpeg" style="width:92%;" class="w3-margin w3-animate-opacity">
-               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>Vice Principal Academic</b> <br><span class="w3-medium">Haj. Aisha Mohammed Sarki</span></p>
-              </div>
-              <div class="headSlides w3-card-2">
-               <img src="images/ICT.png" style="width:92%;" class="w3-margin w3-animate-opacity">
-               <p class="w3-padding-16 w3-large w3-center w3-opacity-min" style="margin-top: 0px;"><b>ICT Desk Officer</b> <br><span class="w3-medium">Mall. Danjuma Hassan</span></p>
-              </div>
-            </div>
-         
-        </div> 
+    <section id="principal" class="gcb-home-section gcb-principal-section">
+      <div class="gcb-section-heading"><span class="gcb-section-label">Leadership</span><h2>Meet our Principal</h2><p>Guiding the next generation through learning, discipline and service.</p></div>
+      <div class="gcb-principal-layout">
+        <article class="gcb-principal-card">
+          <div class="gcb-principal-portrait"><img src="images/P.jpeg" alt="Mallam Mohammed A. Kolo Manbe, Principal of Government College Bida"><span class="gcb-principal-badge"><i class="fa fa-university" aria-hidden="true"></i> Principal since 2025</span></div>
+          <div class="gcb-principal-details"><span class="gcb-staff-kicker">School Principal</span><h3>Mall. Mohammed A. Kolo Manbe</h3><p class="gcb-principal-lead">An experienced educator committed to academic growth and student development at Government College Bida.</p>
+            <div class="gcb-principal-facts"><div><strong>1993</strong><span>NCE · Economics / Government</span></div><div><strong>2007</strong><span>B.Ed. · Economics</span></div><div><strong>2025</strong><span>Appointed Principal</span></div></div>
+            <p>Mallam Mohammed A. Kolo Manbe was born on 16<sup>th</sup> March 1967, in Mambe, Lavun Local Government Area of Niger State. He attended Mambe Primary School from 1977 to 1983 and Community Commercial Technical College Vunchi from 1983 to 1987. He earned his NCE in Economics/Government from the Federal College of Education, Kontagora, in 1993 and a Bachelor of Education in Economics from Ambrose Alli University, Ekpoma, in 2007. After years of service to GCB, he was appointed Principal on 25<sup>th</sup> March 2025.</p>
+          </div>
+        </article>
+        <aside class="gcb-leadership-panel"><div class="gcb-leadership-heading"><span class="gcb-section-label">Our team</span><h3>School leadership</h3></div>
+          <div class="gcb-staff-carousel" aria-label="GCB school leadership">
+            <div class="headSlides gcb-staff-slide" aria-roledescription="slide"><div class="gcb-staff-photo"><img src="images/P.jpeg" alt="Mallam Mohammed Kolo Manbe, School Principal"></div><div class="gcb-staff-caption"><span class="gcb-staff-kicker">School leadership</span><h5>Principal</h5><p>Mall. Mohammed Kolo Manbe</p><span class="gcb-staff-note">Leading Government College Bida</span></div></div>
+            <div class="headSlides gcb-staff-slide" aria-roledescription="slide"><div class="gcb-staff-photo"><img src="images/VP.png" alt="Mallam Umar Raji, Vice Principal Administration"></div><div class="gcb-staff-caption"><span class="gcb-staff-kicker">School leadership</span><h5>Vice Principal, Administration</h5><p>Mall. Umar Raji</p><span class="gcb-staff-note">Government College Bida</span></div></div>
+            <div class="headSlides gcb-staff-slide" aria-roledescription="slide"><div class="gcb-staff-photo"><img src="images/VP2.jpeg" alt="Hajiya Aisha Mohammed Sarki, Vice Principal Academic"></div><div class="gcb-staff-caption"><span class="gcb-staff-kicker">School leadership</span><h5>Vice Principal, Academics</h5><p>Haj. Aisha Mohammed Sarki</p><span class="gcb-staff-note">Government College Bida</span></div></div>
+            <div class="headSlides gcb-staff-slide" aria-roledescription="slide"><div class="gcb-staff-photo"><img src="images/ICT.png" alt="Mallam Danjuma Hassan, ICT Desk Officer"></div><div class="gcb-staff-caption"><span class="gcb-staff-kicker">School leadership</span><h5>ICT Desk Officer</h5><p>Mall. Danjuma Hassan</p><span class="gcb-staff-note">Government College Bida</span></div></div>
+            <div class="gcb-staff-dots" role="group" aria-label="Choose a leadership slide"><button type="button" class="gcb-staff-dot" aria-label="Show slide 1" aria-pressed="true"></button><button type="button" class="gcb-staff-dot" aria-label="Show slide 2" aria-pressed="false"></button><button type="button" class="gcb-staff-dot" aria-label="Show slide 3" aria-pressed="false"></button><button type="button" class="gcb-staff-dot" aria-label="Show slide 4" aria-pressed="false"></button></div>
+          </div>
+          <div class="gcb-principal-shortcuts"><a href="houses.html"><i class="fa fa-shield" aria-hidden="true"></i><span>School Houses</span><i class="fa fa-angle-right" aria-hidden="true"></i></a><a href="facilities.html"><i class="fa fa-building-o" aria-hidden="true"></i><span>Facilities</span><i class="fa fa-angle-right" aria-hidden="true"></i></a><a href="award.html"><i class="fa fa-trophy" aria-hidden="true"></i><span>Awards &amp; Honours</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </aside>
       </div>
     </section>
     <!-- History -->
-    <section id="about" class="w3-margin w3-container ">
-      <div class="w3-row">
-        <div class="w3-half w3-margin-bottom" style="margin-top: 20px;">
-          <div class="w3-padding">
-            <img src="images/GCBmosq.jpeg" alt="gcb_gate" class=" w3-margin-bottom w3-card" style="width: 100%; " />
-          </div>
-        </div>
-
-        <div class="w3-half w3-margin-bottom">
-          <div class="w3-padding w3-medium">
-            <h3 class="section-heading">History</h3>
-            <p class="w3-opacity w3-justify" style="text-align: left;">Government College, Bida, established in 1912 (with first intake in 1914), is a historic Nigerian boys' boarding school known for producing many prominent figures, including two Nigerian Heads of State, governors, and ministers, evolving through names like Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
-            <a href="history.html" class="w3-theme-l1 w3-btn" style="text-decoration: none;">Read More...</a>
-          </div>
-
-        </div> 
-      </div>
+    <section id="about" class="gcb-home-section gcb-home-history">
+      <div class="gcb-history-feature"><div class="gcb-history-image"><img src="images/GCBmosq.jpeg" alt="Historic campus architecture at Government College Bida"><span><i class="fa fa-book" aria-hidden="true"></i> A legacy since 1912</span></div><div class="gcb-history-copy"><span class="gcb-section-label">Our heritage</span><h2>A tradition that keeps growing</h2><p>Government College Bida was established in 1912, with its first intake in 1914. This historic Nigerian boys’ boarding school has produced prominent figures, including two Nigerian Heads of State, governors and ministers. It evolved through names such as Bida Middle School and Niger Provincial Secondary School before becoming Government College Bida in 1970.</p><div class="gcb-history-stats"><div><strong>1912</strong><span>Established</span></div><div><strong>1914</strong><span>First intake</span></div><div><strong>1970</strong><span>Government College Bida</span></div></div><a class="gcb-section-link" href="history.html">Explore our history <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
     </section>
     <!-- Past Principal -->
-    <section class="w3-margin w3-container w3-card w3-border-left w3-border-green">
-      <div class="w3-responsive">
-        <table class="w3-table-all w3-hoverable w3-margin">
-          <tr>
-            <h4 class="w3-center w3-wide">Headmaster/Principal 1912 to Date</h4>
-          </tr>
-          <tr class="w3-hover-green w3-opacity">
-            <th class="">S/N</th>
-            <th class="">Names</th>
-            <th class="">Headmaster/<br>Principal</th>
-            <th class="">Tenure</th>
-          </tr>
-          <tr class="w3-hover-green">
-            <td>1</td>
-            <td>Alh. Ahmadu Abubakar</td>
-            <td>Headmaster</td>
-            <td>1912-1914</td>
-          </tr>
-          <tr class="w3-hover-green">
-            <td>2</td>
-            <td>Mall. Nagwamatse</td>
-            <td>Headmaster</td>
-            <td>1914-1922</td>
-          </tr>
-          <tr class="w3-hover-green">
-            <td>3</td>
-            <td>Mr. T.H. Baldwin</td>
-            <td>Supt of Educ.</td>
-            <td>1922-1926</td>
-          </tr>
-          <tr class="w3-hover-green">
-            <td>4</td>
-            <td>Mall. Ahmadu Abibu</td>
-            <td>Headmaster</td>
-            <td>1922-1926</td>
-          </tr>
-          <tr class="w3-hover-green">
-            <td>5</td>
-            <td>Mall. Jimada Naibi</td>
-            <td>Headmaster</td>
-            <td>1926-1932</td>
-          </tr>
-          <tr class="w3-hover-none">
-            <td colspan="4"><a href="past-principals.html" style="text-decoration: none; color: green;">Clik here to view full list...</a></td>
-          </tr>
-        </table>
+    <section class="gcb-home-section gcb-past-principals">
+      <div class="gcb-section-heading"><span class="gcb-section-label">A history of service</span><h2>Past Headmasters &amp; Principals</h2><p>Honouring the educators who have guided Government College Bida.</p></div>
+      <div class="gcb-principal-timeline">
+        <article class="gcb-principal-record"><span class="gcb-record-number">01</span><div><h3>Alh. Ahmadu Abubakar</h3><p>Headmaster</p></div><time>1912–1914</time></article>
+        <article class="gcb-principal-record"><span class="gcb-record-number">02</span><div><h3>Mall. Nagwamatse</h3><p>Headmaster</p></div><time>1914–1922</time></article>
+        <article class="gcb-principal-record"><span class="gcb-record-number">03</span><div><h3>Mr. T. H. Baldwin</h3><p>Superintendent of Education</p></div><time>1922–1926</time></article>
+        <article class="gcb-principal-record"><span class="gcb-record-number">04</span><div><h3>Mall. Ahmadu Abibu</h3><p>Headmaster</p></div><time>1922–1926</time></article>
+        <article class="gcb-principal-record"><span class="gcb-record-number">05</span><div><h3>Mall. Jimada Naibi</h3><p>Headmaster</p></div><time>1926–1932</time></article>
       </div>
+      <a class="gcb-section-link gcb-all-principals-link" href="past-principals.html">View the full list <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     </section>
     
     <!-- Prominent Graduates -->
-    <section id="service" class="w3-margin w3-container ">
-      <h3 class="section-heading">Prominent Graduates</h3>
-      <p class="w3-justify w3-opacity">The most prominent graduates of Government College Bida, one of Nigeria's historic secondary school known for producing influencial leaders accross many fields, to mention but few.</p>
-      <div class="w3-row-padding w3-margin-top">
-        <div class="w3-third w3-margin-bottom">
-          <div class="w3-padding">
-            <img src="images/ibb.jfif" alt="ibb" class=" w3-margin-bottom w3-card" style="width: 100%; " />
-            <h6 style="text-align: left;">Gen. Ibrahim Badamasi Babangida CGFR</h6>
-            <p class="w3-opacity w3-justify" style="text-align: left;">Former Nigeria Military Head of State (1985-1993). One of the most internationally known alumni of the school. Born in northern Niger state, Babangida received military training in Nigeria, India, Great Britain, and the United States. He rose through the ranks and was known for his courage—he played a major role in suppressing an attempted coup in 1976 when he walked into a rebel-held radio station unarmed.</p>
-
-          </div>
-        </div>
-
-        <div class="w3-third w3-margin-bottom">
-          <div class="w3-padding">
-            <img src="images/abdulsalam.jfif" alt="abdulsalam" class=" w3-margin-bottom w3-card" style="width: 100%;" />
-            <h6 style="text-align: left;">Gen. Abdulsalam Abubakar CGFR</h6>
-            <p class="w3-opacity w3-justify" style="text-align: left;">Abdusalam Abubakar (born June 13, 1942, Minna, Nigeria) is a Nigerian military leader, who served as head of state (1998–99). Also one of the most internationally known alumni of the school. Hailing from the middle belt of the country, Abubakar joined the army in 1975 and received his formal military training in the United States. He commanded Nigeria’s contingent of United Nations peacekeeping troops in Lebanon in 1981.</p>
-          </div>
-        </div>
-
-        <div class="w3-third w3-margin-bottom">
-          <div class="w3-padding">
-            <img src="images/AAZuru.jfif" alt="Zuru" class=" w3-margin-bottom w3-card" style="width: 100%;" />
-            <h6 style="text-align: left;">Professor A. A. Zuru</h6>
-            <p class="w3-opacity w3-justify" style="text-align: left;">Professor Abdullahi Abdul Zuru is a prominent figure in Nigeria's academic and professional landscape, also Almunus of Government College Bida. He served as the Vice Chancellor at Usmanu Danfodiyo University, Sokoto, and Kebbi State University. His contributions to science and technology were recognized, and he was involved in various research and development projects.</p>
-          </div>
-        </div> 
+    <section id="service" class="gcb-home-section gcb-graduates-section">
+      <div class="gcb-section-heading"><span class="gcb-section-label">GCB alumni</span><h2>Prominent graduates</h2><p>GCB alumni have made lasting contributions across leadership, public service and academia.</p></div>
+      <div class="gcb-graduate-grid">
+        <article class="gcb-graduate-card"><div class="gcb-graduate-photo"><img src="images/ibb.jfif" alt="General Ibrahim Badamasi Babangida"></div><div class="gcb-graduate-copy"><span class="gcb-graduate-field"><i class="fa fa-star" aria-hidden="true"></i> National leadership</span><h3>General Ibrahim Badamasi Babangida CGFR</h3><p>Former Nigerian Military Head of State (1985–1993), Babangida received military training in Nigeria, India, Great Britain and the United States. He rose through the ranks and was known for his courage. During an attempted coup in 1976, he walked unarmed into a rebel-held radio station.</p></div></article>
+        <article class="gcb-graduate-card"><div class="gcb-graduate-photo"><img src="images/abdulsalam.jfif" alt="General Abdulsalam Abubakar"></div><div class="gcb-graduate-copy"><span class="gcb-graduate-field"><i class="fa fa-star" aria-hidden="true"></i> Public service</span><h3>General Abdulsalam Abubakar CGFR</h3><p>Born in Minna on June 13, 1942, Abubakar is a Nigerian military leader from the Middle Belt. He served as Head of State from 1998 to 1999 and handed power to a civilian government. After joining the army in 1975 and receiving formal military training in the United States, he commanded Nigeria’s United Nations peacekeeping contingent in Lebanon in 1981.</p></div></article>
+        <article class="gcb-graduate-card"><div class="gcb-graduate-photo"><img src="images/AAZuru.jfif" alt="Professor Abdullahi Abdul Zuru"></div><div class="gcb-graduate-copy"><span class="gcb-graduate-field"><i class="fa fa-star" aria-hidden="true"></i> Academia &amp; science</span><h3>Professor A. A. Zuru</h3><p>Professor Abdullahi Abdul Zuru served as Vice Chancellor at Usmanu Danfodiyo University, Sokoto, and Kebbi State University. His contributions to science and technology were recognized through his research and development work.</p></div></article>
       </div>
     </section>
-    <!-- Contact Information Section -->
+    <!-- Contact Information Section
     <section id="about" class="w3-margin w3-container ">
       <div class="w3-row w3-margin-top">
         <div class="w3-half w3-margin-bottom">
@@ -331,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             </button>
         </div>
         <div class="w3-half w3-margin-bottom">
-          <!-- Map Section -->
+          -- Map Section 
           <div id="kadunaMap" class="w3-container w3-padding-32 w3-bordered w3-border-green">
             <div class="">
               <iframe 
@@ -342,36 +228,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
-    <!-- Footer -->
-    <footer class="w3-theme-l2">
-      <div class="w3-row">
-        <div class="w3-third">
-          <div class="w3-bar">
-            <a href="#" class="w3-button w3-hover-none w3-bar-item"><img style="margin-right: 0; margin-top: 12px; width: 65px; height: 45px;" src="images/gcblogo.png"></a>
-            <h6 class="w3-bar-item " style="margin-left: 0; text-shadow:1px 1px 0 #444; color: green;"><b>Government College Bida</b><br><small class="w3-opacity">Established 1912</small></h6>
-          </div>
-        </div>
-        <div class="w3-third">
-          <p class="w3-margin w3-small w3-justify w3-opacity">Government College, Bida, established in 1912, evolving through names like Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
-        </div>
-        <div class="w3-third w3-small w3-opacity w3-margin">
-          <div class="useful">
-            <h4><b>Useful links</b></h4>
-            <a href="index.html" class="w3-button  w3-hover-none">> Home</a><br>
-            <a href="history.html" class=" w3-button  w3-hover-none">> The School</a><br>
-            <a href="facilities.html" class=" w3-button  w3-hover-none">> School Facilities</a><br>
-            <a href="houses.html" class=" w3-button w3-hover-none">> Houses</a><br>
-            <a href="admission.html" class=" w3-button w3-hover-none">> Admission</a>     
-          </div>   
-        </div>
+    <a class="gcb-scroll-top" href="#top" aria-label="Back to top" title="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <footer class="gcb-footer">
+      <div class="gcb-footer-main">
+        <div><a class="gcb-footer-brand" href="index.html"><img src="images/gcblogo.png" alt="GCB crest"><span>GCB<small>Government College Bida · Established 1912</small></span></a></div>
+        <p>Government College, Bida, established in 1912, evolved through names including Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
+        <section class="gcb-footer-gallery" aria-label="GCB houses gallery"><h4>Explore our houses</h4><div class="gcb-house-gallery"><a href="houses.html" aria-label="Visit the School Houses page: Sudan House"><img src="images/Sudan.jpeg" alt="Sudan House"><span>Sudan House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Etsu Nupe House"><img src="images/Estu.jpeg" alt="Etsu Nupe House"><span>Etsu Nupe House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Kuta House"><img src="images/Kuta.jpeg" alt="Kuta House"><span>Kuta House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Zazzau House"><img src="images/Zazzau.jpeg" alt="Zazzau House"><span>Zazzau House</span></a></div></section>
       </div>
+      <div class="gcb-footer-bottom"><span>GCB &copy; 2026. All rights reserved.</span><a href="https://wa.me/2347039868688" target="_blank" rel="noopener noreferrer" aria-label="Message Abubakar Ibrahim on WhatsApp">Powered by Abubakar Ibrahim (BOSA 2013)</a></div>
     </footer>
-    <div class="w3-center w3-padding w3-small w3-opacity" style="background-color: green; color: white;">
-          GCB &copy; 2026. All Rights Reserverd <br>
-          Powered by BOSA 2013
-    </div>
   </div>
   <!-- External JavaScript -->
   <script src="script.js"></script>

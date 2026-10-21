@@ -84,125 +84,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   
 </head>
-<body class="w3-light-grey">
+<body class="gcb-inner-page" id="top" class="w3-light-grey">
 
-  <!-- Top Navigation Bar -->
-  <div class="w3-bar w3-top w3-card w3-large w3-white" style="z-index:4;">
-    <div class="w3-row"> 
-      <div class="w3-third" style="width: 13%; margin-left: 0; margin-top: 4px;">
-        <span class="w3-left w3-bar-item"><img src="images/gcblogo.png"" alt="Logo" style="height: 25px;"/></span>
-      </div>
-      <div class="w3-third" style="width: 74%;">
-        <h4 class="section-heading w3-wide" style="text-shadow:2px 1px 0 #444; color: green;"><marquee><b>Government College Bida Official Website</b></marquee></h4>
-      </div>
-      <div class="w3-third" style="width: 13%; margin-bottom: 10px">
-        <button class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-none w3-xlarge w3-hover-text-green w3-text-green" id="menu-btn" title="Toggle Navigation" >&#9776;</button>
-      </div>
+  <div class="gcb-loader" id="page-loader" aria-live="polite" aria-label="Loading GCB" aria-hidden="false"><div class="gcb-loader-inner"><span class="gcb-spinner" aria-hidden="true"></span><span>GCB</span></div></div>
+  <header class="w3-top w3-card gcb-topbar">
+    <a class="gcb-brand" href="index.html" aria-label="GCB home"><img src="images/gcblogo.png" alt="GCB crest"><span class="gcb-brand-name">GCB<small>Government College Bida</small></span></a>
+    <span class="gcb-top-title">Government College Bida</span>
+    <button class="w3-button w3-hide-large w3-xlarge w3-text-green" id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mySidebar" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  </header>
+  <nav class="w3-sidebar w3-bar-block w3-collapse" id="mySidebar" aria-label="Main navigation">
+    <a href="index.html"><i class="fa fa-home gcb-nav-icon" aria-hidden="true"></i>Home</a>
+    <div class="gcb-nav-group">
+      <button type="button" onclick="myFunction()" aria-controls="Drop" aria-expanded="false"><i class="fa fa-university gcb-nav-icon" aria-hidden="true"></i>About Us <i class="fa fa-angle-right gcb-chevron" aria-hidden="true"></i></button>
+      <div id="Drop" class="w3-dropdown-content w3-bar-block"><a href="history.html"><i class="fa fa-book gcb-nav-icon" aria-hidden="true"></i>The School</a><a href="past-principals.html"><i class="fa fa-users gcb-nav-icon" aria-hidden="true"></i>Past Principals</a></div>
     </div>
-  </div>
-
-  <!-- Sidebar / Side Navigation -->
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:260px; top:58px; z-index:3;" id="mySidebar">
-    <class="w3-bar-item" style="font-weight:300; margin-top: 40px; margin-left: 0px;">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green w3-green">Home</a>
-    <div class="w3-dropdown-click">
-    <button onclick="myFunction()" class="w3-button w3-hover-green">About Us<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
-    <div id="Drop" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="history.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">The School</a>
-      <a href="past-principals.html" class="w3-bar-item w3-button w3-hover-green">Past Headmaster/Principal</a>
+    <div class="gcb-nav-group">
+      <button type="button" onclick="myFunction1()" aria-controls="Drop1" aria-expanded="false"><i class="fa fa-compass gcb-nav-icon" aria-hidden="true"></i>School Life <i class="fa fa-angle-right gcb-chevron" aria-hidden="true"></i></button>
+      <div id="Drop1" class="w3-dropdown-content w3-bar-block"><a href="facilities.html"><i class="fa fa-building-o gcb-nav-icon" aria-hidden="true"></i>Facilities</a><a href="houses.html"><i class="fa fa-shield gcb-nav-icon" aria-hidden="true"></i>Houses</a><a href="award.html"><i class="fa fa-trophy gcb-nav-icon" aria-hidden="true"></i>Awards &amp; Honours</a></div>
     </div>
-   </div>
-   <div class="w3-dropdown-click">
-    <button onclick="myFunction1()" class="w3-button w3-hover-green">School Life<span class="w3-right" style="transform: rotate(90deg); display: inline-block;">&#10095;</span></button>
-    <div id="Drop1" class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="facility.html" class="w3-bar-item w3-button w3-hover-green w3-hover-green">Facilities</a>
-      <a href="houses.html" class="w3-bar-item w3-button w3-hover-green">Houses</a>
-      <a href="award.html" class="w3-bar-item w3-button w3-hover-green">Awards & Honours</a>
-    </div>
-   </div>
-    <a href="admission.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Admission</a>
-    <a href="gallery.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Gallery</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hover-mudstone w3-hover-green">Contact</a>
+    <a href="admission.html"><i class="fa fa-graduation-cap gcb-nav-icon" aria-hidden="true"></i>Admission</a>
+    <a href="gallery.html"><i class="fa fa-picture-o gcb-nav-icon" aria-hidden="true"></i>Gallery</a>
+    <a href="contact.html"><i class="fa fa-envelope-o gcb-nav-icon" aria-hidden="true"></i>Contact</a>
   </nav>
-
-  <!-- Overlay for mobile -->
-  <div class="w3-overlay w3-hide-large" style="cursor:pointer" id="overlay"></div>
-
+  <div class="w3-overlay w3-hide-large" id="overlay" aria-hidden="true"></div>
   <!-- Page Content -->
-  <div class="w3-main" style="margin-left:260px; margin-top:56px;">
-
-    <!-- Introduction Section -->
-    <section style="background-image: url(images/GCB3.jpeg); background-repeat: no-repeat; background-position: center;">
-      <h3 class="w3-margin w3-text-white w3-padding-32"><b>Awards & Honours</b></h3>
-    </section>
-    <!-- Houses -->
-    <section class="w3-margin w3-card w3-border-left w3-border-green">
-      <div class="w3-row-padding w3-margin-top">
-        <div class="w3-third w3-margin w3-card-4">
-          <div class="w3-padding w3-margin">
-            <img src="images/award3.jpeg" alt="Library" class=" w3-margin-bottom w3-card" style="width: 100%;" />
-            <h4 class="w3-wide w3-text-green" style="text-align: center; text-shadow:1px 1px 0 #444;">Manual Bohole donated by Bosa 2005</h4>
-            <p class="w3-opacity w3-justify" style="text-align: left;"></p>
-          </div>
-        </div> 
-      
-        <div class="w3-third w3-margin w3-card-4">
-          <div class="w3-padding w3-margin">
-            <img src="images/award2.jpeg" alt="Ict Lab" class=" w3-margin-bottom w3-card" style="width: 100%; " />
-            <h4 class="w3-wide w3-text-green" style="text-align: center; text-shadow:1px 1px 0 #444;">Manual Bohole upgraded by Bosa 1995</h4>
-            <p class="w3-opacity w3-justify" style="text-align: left;"></p>
-
-          </div>
-        </div>
-        <div class="w3-third w3-margin w3-card-4">
-          <div class="w3-padding w3-margin">
-            <img src="images/award1.jpeg" alt="Ict Lab" class=" w3-margin-bottom w3-card" style="width: 100%; " />
-            <h4 class="w3-wide w3-text-green" style="text-align: center; text-shadow:1px 1px 0 #444;">Construction of a brand new hostel by Nigeria Army intervention</h4>
-            <p class="w3-opacity w3-justify" style="text-align: left;"></p>
-
-          </div>
-        </div>
+  <div class="w3-main gcb-page-main">
+    <section class="gcb-page-hero"><div><span class="gcb-page-eyebrow">Progress through partnership</span><h1>Awards &amp; Honours</h1><p>Celebrating investment in the future of Government College Bida.</p></div></section>
+    <main class="gcb-content-shell gcb-visual-content">
+      <section class="gcb-content-intro"><span class="gcb-section-label">A lasting contribution</span><h2>Recognition through action</h2><p>These projects reflect the support of GCB’s alumni and partners in improving facilities for students and the wider school community.</p></section>
+      <div class="gcb-award-grid">
+        <article class="gcb-award-card"><div class="gcb-award-photo"><img src="images/award3.jpeg" alt="Manual borehole donated by BOSA in 2005"><span class="gcb-award-year">2005</span></div><div class="gcb-award-copy"><span class="gcb-section-label">Alumni support</span><h2>Manual Borehole</h2><p>Donated by BOSA to support access to water at the school.</p></div></article>
+        <article class="gcb-award-card"><div class="gcb-award-photo"><img src="images/award2.jpeg" alt="Manual borehole upgraded by BOSA in 1995"><span class="gcb-award-year">1995</span></div><div class="gcb-award-copy"><span class="gcb-section-label">Alumni support</span><h2>Borehole Upgrade</h2><p>Upgraded by BOSA as part of its contribution to the school community.</p></div></article>
+        <article class="gcb-award-card"><div class="gcb-award-photo"><img src="images/award1.jpeg" alt="New hostel built through a Nigeria Army intervention"><span class="gcb-award-year"><i class="fa fa-building-o" aria-hidden="true"></i></span></div><div class="gcb-award-copy"><span class="gcb-section-label">Infrastructure</span><h2>New Student Hostel</h2><p>Constructed through a Nigeria Army intervention to strengthen the school’s hostel facilities.</p></div></article>
       </div>
-      <!-- <div class="w3-row-padding w3-margin-top">
-        
-        <div class="w3-half w3-margin w3-card-4 w3-warning">
-          <div class="w3-padding w3-margin">
-            <img src="images/image/Lib.png" alt="Library" class=" w3-margin-bottom w3-card" style="width: 100%;" />
-            <h4 class="w3-wide" style="text-align: center; text-shadow:2px 1px 0 #444; color: white;">Zazzau House</h4>
-            <p class="w3-opacity w3-justify" style="text-align: left;"></p>
-          </div>
-        </div> 
-      </div> -->
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="w3-theme-l2">
-      <div class="w3-row">
-        <div class="w3-third">
-          <div class="w3-bar">
-            <a href="#" class="w3-button w3-hover-none w3-bar-item"><img style="margin-right: 0; margin-top: 12px; width: 65px; height: 45px;" src="images/gcblogo.png"></a>
-            <h6 class="w3-bar-item " style="margin-left: 0; text-shadow:1px 1px 0 #444; color: green;"><b>Government College Bida</b><br><small class="w3-opacity">Established 1912</small></h6>
-          </div>
-        </div>
-        <div class="w3-third">
-          <p class="w3-margin w3-small w3-justify w3-opacity">Government College, Bida, established in 1912, evolving through names like Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
-        </div>
-        <div class="w3-third w3-small w3-opacity w3-margin">
-          <div class="useful">
-            <h4><b>Useful links</b></h4>
-            <a href="index.html" class="w3-button  w3-hover-none">> Home</a><br>
-            <a href="history.html" class=" w3-button  w3-hover-none">> The School</a><br>
-            <a href="facilities.html" class=" w3-button  w3-hover-none">> School Facilities</a><br>
-            <a href="houses.html" class=" w3-button w3-hover-none">> Houses</a><br>
-            <a href="admission.html" class=" w3-button w3-hover-none">> Admission</a>     
-          </div>   
-        </div>
+    <a class="gcb-scroll-top" href="#top" aria-label="Back to top" title="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <footer class="gcb-footer">
+      <div class="gcb-footer-main">
+        <div><a class="gcb-footer-brand" href="index.html"><img src="images/gcblogo.png" alt="GCB crest"><span>GCB<small>Government College Bida · Established 1912</small></span></a></div>
+        <p>Government College, Bida, established in 1912, evolved through names including Bida Middle School and Niger Provincial Secondary School before becoming Government College, Bida in 1970.</p>
+        <section class="gcb-footer-gallery" aria-label="GCB houses gallery"><h4>Explore our houses</h4><div class="gcb-house-gallery"><a href="houses.html" aria-label="Visit the School Houses page: Sudan House"><img src="images/Sudan.jpeg" alt="Sudan House"><span>Sudan House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Etsu Nupe House"><img src="images/Estu.jpeg" alt="Etsu Nupe House"><span>Etsu Nupe House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Kuta House"><img src="images/Kuta.jpeg" alt="Kuta House"><span>Kuta House</span></a><a href="houses.html" aria-label="Visit the School Houses page: Zazzau House"><img src="images/Zazzau.jpeg" alt="Zazzau House"><span>Zazzau House</span></a></div></section>
       </div>
+      <div class="gcb-footer-bottom"><span>GCB &copy; 2026. All rights reserved.</span><a href="https://wa.me/2347039868688" target="_blank" rel="noopener noreferrer" aria-label="Message Abubakar Ibrahim on WhatsApp">Powered by Abubakar Ibrahim (BOSA 2013)</a></div>
     </footer>
-    <div class="w3-center w3-padding w3-small w3-opacity" style="background-color: green; color: white;">
-          GCB &copy; 2026. All Rights Reserverd <br>
-          Powered by BOSA 2013
-    </div>
   </div>
   <!-- External JavaScript -->
   <script src="script.js"></script>
