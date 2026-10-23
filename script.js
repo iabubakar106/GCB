@@ -1,4 +1,15 @@
 // Shared interactions for every GCB page.
+function hidePageLoader() {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+  loader.classList.add('is-hidden');
+  loader.setAttribute('aria-hidden', 'true');
+}
+
+// Clear a transition overlay when the browser restores a cached page.
+window.addEventListener('pageshow', hidePageLoader);
+window.addEventListener('pagehide', hidePageLoader);
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuButton = document.getElementById('menu-btn');
   const sidebar = document.getElementById('mySidebar');
@@ -59,11 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
     window.addEventListener('load', function () {
-      window.setTimeout(function () {
-        loader.classList.add('is-hidden');
-        loader.setAttribute('aria-hidden', 'true');
-      }, 180);
+      window.setTimeout(hidePageLoader, 180);
     });
+    // Also hide it if this script runs after the load event.
+    if (document.readyState === 'complete') window.setTimeout(hidePageLoader, 180);
   }
 
   if (scrollTopLink) {
